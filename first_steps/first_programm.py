@@ -2,7 +2,7 @@
 Some very simple program to start with.
 Here we have map (dictionary) of commands shortcuts and descriptions and
 simple function that starts function from other script in this
-module name.
+module name space.
 
 Created by akaish at 21.03.2019
 """
@@ -11,11 +11,14 @@ from first_steps.for_import import A_AND_B_EQUAL
 from first_steps.for_import import A_LESS_THEN_B
 from first_steps.for_import import B_LESS_THEN_A
 from first_steps.for_import import compare_two_integers as compare 
+from first_steps.for_import import L_TEST as lambda_test_variable
+from first_steps.for_import import lambda_executor_function as lambda_executor
 
 command_dictionary = {
     '-h' : 'help',
     '-p1' : 'hello username program',
     '-p2' : 'compare two integers',
+    '-p3' : 'lambda test (passing lambda that executes to another function)',
     '-q' : 'quit'}
 
 def input_integer(input_string) :
@@ -58,6 +61,9 @@ def main() :
         b = input_integer("Input second value to compare :")
         if(b == None) : exit_from_p2()
         print(switch_alike_with_lamdas_for_p2(compare(a, b), a, b))
+        main()
+    elif(command == '-p3') :
+        lambda_executor(lambda_test_variable)
         main()
     elif(command == '-q') :
         print("Bye bye!")

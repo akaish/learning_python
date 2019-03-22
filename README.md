@@ -9,3 +9,4 @@ I believe that this stack is awesome for developing both web and desktop applica
 
 Right know this project has following modules.
 * first_steps: dictionary, function declarations, imports, if-elif-else, lamdas. My first Python script.
+* simple_calculator: very simple calculator. Second Python script. (in proccess)
